@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00aaff, #0044ff); /* নীল গ্রেডিয়েন্ট */
+}
+
+.game-container {
+    text-align: center;
+    background: linear-gradient(to right, #00aaff, #0044ff); /* নীল গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* বক্স শ্যাডো */
+    width: 360px; /* বক্সের চওড়া */
+    height: 500px; /* বক্সের উচ্চতা */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Golden color for RAHAT CREATION */
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #ff5c5c, #ff1a1a); /* সেলগুলোর জন্য লাল গ্রেডিয়েন্ট */
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px; /* বড় ফন্ট সাইজ */
+    font-weight: bold; /* বোল্ড ফন্ট */
+    color: white; /* সাদা রঙ */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* RGB শ্যাডো */
+    transition: box-shadow 0.3s ease-in-out; /* শ্যাডোর জন্য ট্রানজিশন */
+}
+
+/* সেলটির শ্যাডো পরিবর্তন হবে */
+.cell:hover {
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.7); /* RGB cyan শ্যাডো */
+}
+
+/* সেলটি ক্লিক হলে সুন্দর আভা দিয়ে হাইলাইট হবে */
+.cell:active {
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 1); /* RGB cyan শ্যাডো ক্লিকের সময় */
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 255, 255)); /* RGB গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: linear-gradient(to right, rgb(0, 255, 255), rgb(255, 0, 255)); /* Hover effect for the button */
+}
+
+#status-container {
+    margin-top: 20px;
+}
+
+#status {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #fff; /* স্ট্যাটাস টেক্সট সাদা */
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 255, 255)); /* RGB গ্রেডিয়েন্ট স্ট্যাটাস */
+    -webkit-background-clip: text;
+    color: transparent;
+}
